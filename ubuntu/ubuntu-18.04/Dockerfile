@@ -6,6 +6,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get -qq update \
     && apt-get -qq install -y --no-install-recommends \
+       locales \
+       file \
        git \
        gawk \
        wget \
@@ -35,7 +37,14 @@ RUN apt-get -qq update \
     && useradd -ms /bin/bash yocto \
     && printf "yocto:yocto" | chpasswd \
     && adduser yocto sudo \
-    && printf "yocto ALL= NOPASSWD: ALL\\n" >> /etc/sudoers
+    && printf "yocto ALL= NOPASSWD: ALL\\n" >> /etc/sudoers \
+    && /usr/sbin/locale-gen en_US.UTF-8 \
+    && dpkg-reconfigure locales \
+    && locale-gen en_US.UTF-8 \
+    && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 \
+    && echo 'export LANG=en_US.UTF-8' > ~yocto/.bashrc \
+    && echo 'dash dash/sh boolean false' | debconf-set-selections \
+    && dpkg-reconfigure dash
 
 USER yocto
 WORKDIR /home/yocto
