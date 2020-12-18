@@ -20,8 +20,8 @@ The images listed below are intended for **generating open-source library packag
 * TODO Fedora 32
 
 ### CentOS
-* TODO CentOS 7.x
-* CentOS 8.x
+* CentOS 7
+* CentOS 8
 
 ### Debian
 * TODO Debian 8.x (Jessie)
