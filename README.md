@@ -26,9 +26,6 @@ The images listed below are intended for **generating open-source library packag
 * Debian 9.x (Stretch)
 * Debian 10.x (Buster)
 
-### OpenSUSE
-* TODO OpenSUSE Leap 15.1
-
 ## Instructions
 
 1. Build the docker image
