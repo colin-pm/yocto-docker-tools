@@ -23,9 +23,8 @@ The images listed below are intended for **generating open-source library packag
 * CentOS 8
 
 ### Debian
-* TODO Debian 8.x (Jessie)
-* TODO Debian 9.x (Stretch)
-* TODO Debian 10.x (Buster)
+* Debian 9.x (Stretch)
+* Debian 10.x (Buster)
 
 ### OpenSUSE
 * TODO OpenSUSE Leap 15.1
