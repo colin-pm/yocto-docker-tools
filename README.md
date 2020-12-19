@@ -15,9 +15,8 @@ The images listed below are intended for **generating open-source library packag
 * Ubuntu 20.04 (LTS)
 
 ### Fedora
-* TODO Fedora 30
-* TODO Fedora 31
-* TODO Fedora 32
+* Fedora 31
+* Fedora 32
 
 ### CentOS
 * CentOS 7
