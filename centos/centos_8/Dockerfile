@@ -47,6 +47,8 @@ RUN dnf install -y 'dnf-command(config-manager)' \
         rpcgen \
         mesa-libGL-devel \
         glibc-langpack-en \
+        openssh-server \
+        openssh-clients \
     && useradd -ms /bin/bash yocto \
     && printf "yocto:yocto" | chpasswd \
     && printf "yocto ALL= NOPASSWD: ALL\\n" >> /etc/sudoers \
