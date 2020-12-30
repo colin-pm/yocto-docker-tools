@@ -2,8 +2,6 @@
 
 Docker images for building with Yocto.
 
-This project is currently a work in progress.
-
 > :warning: **Warning:**
 The images listed below are intended for **generating open-source library packages** and we cannot guarantee any kind of stability. We strongly recommend using your own generated images for production environments taking the dockerfiles in this repository as a reference.
 
