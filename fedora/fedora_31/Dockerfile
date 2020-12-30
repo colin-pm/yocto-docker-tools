@@ -43,7 +43,9 @@ RUN dnf -y update \
         SDL-devel \
         xterm \
         rpcgen \
-        mesa-libGL-devel\
+        mesa-libGL-devel \
+        openssh-server \
+        openssh-clients \
     && useradd -ms /bin/bash yocto \
     && printf "yocto:yocto" | chpasswd \
     && printf "yocto ALL= NOPASSWD: ALL\\n" >> /etc/sudoers \
