@@ -1,0 +1,65 @@
+version: '3'
+services:
+    yocto-centos7:
+        build:
+            context: centos/centos_7
+            dockerfile: Dockerfile
+        image: "${DOCKER_USERNAME}/yocto-centos7:${DOCKER_BUILD_TAG}"
+        container_name: yocto-centos7
+        tty: true
+    yocto-centos8:
+        build:
+            context: centos/centos_8
+            dockerfile: Dockerfile
+        image: "${DOCKER_USERNAME}/yocto-centos8:${DOCKER_BUILD_TAG}"
+        container_name: yocto-centos8
+        tty: true
+    yocto-debian9:
+        build:
+            context: debian/debian_9
+            dockerfile: Dockerfile
+        image: "${DOCKER_USERNAME}/yocto-debian9:${DOCKER_BUILD_TAG}"
+        container_name: yocto-debian9
+        tty: true
+    yocto-debian10:
+        build:
+            context: debian/debian_10
+            dockerfile: Dockerfile
+        image: "${DOCKER_USERNAME}/yocto-debian10:${DOCKER_BUILD_TAG}"
+        container_name: yocto-debian10
+        tty: true
+    yocto-fedora31:
+        build:
+            context: fedora/fedora_31
+            dockerfile: Dockerfile
+        image: "${DOCKER_USERNAME}/yocto-fedora31:${DOCKER_BUILD_TAG}"
+        container_name: yocto-fedora31
+        tty: true
+    yocto-fedora32:
+        build:
+            context: fedora/fedora_32
+            dockerfile: Dockerfile
+        image: "${DOCKER_USERNAME}/yocto-fedora32:${DOCKER_BUILD_TAG}"
+        container_name: yocto-fedora32
+        tty: true
+    yocto-ubuntu16:
+        build:
+            context: ubuntu/ubuntu_16
+            dockerfile: Dockerfile
+        image: "${DOCKER_USERNAME}/yocto-ubuntu16:%{DOCKER_BUILD_TAG}"
+        container_name: yocto-ubuntu16
+        tty: true
+    yocto-ubuntu18:
+        build:
+            context: ubuntu/ubuntu_18
+            dockerfile: Dockerfile
+        image: "${DOCKER_USERNAME}/yocto-ubuntu18:%{DOCKER_BUILD_TAG}"
+        container_name: yocto-ubuntu18
+        tty: true
+    yocto-ubuntu16:
+        build:
+            context: ubuntu/ubuntu_20
+            dockerfile: Dockerfile
+        image: "${DOCKER_USERNAME}/yocto-ubuntu20:%{DOCKER_BUILD_TAG}"
+        container_name: yocto-ubuntu20
+        tty: true
