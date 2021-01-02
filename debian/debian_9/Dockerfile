@@ -38,7 +38,9 @@ RUN apt-get clean \
     && printf "yocto ALL= NOPASSWD: ALL\\n" >> /etc/sudoers \
     && echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen \
     && locale-gen \
-    && echo 'export LANG=en_US.UTF-8' > ~yocto/.bashrc
+    && echo 'export LC_ALL=en_US.UTF-8' > ~yocto/.bashrc \
+    && echo 'export LANG=en_US.UTF-8' > ~yocto/.bashrc \
+    && echo 'export LANGUAGE=en+US.UTF-8' > ~yocto/.bashrc
 
 USER yocto
 WORKDIR /home/yocto

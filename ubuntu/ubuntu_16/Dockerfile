@@ -43,9 +43,11 @@ RUN apt-get -qq update \
     && dpkg-reconfigure locales \
     && locale-gen en_US.UTF-8 \
     && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 \
-    && echo 'export LANG=en_US.UTF-8' > ~yocto/.bashrc \
     && echo 'dash dash/sh boolean false' | debconf-set-selections \
-    && dpkg-reconfigure dash
+    && dpkg-reconfigure dash \
+    && echo 'export LC_ALL=en_US.UTF-8' > ~yocto/.bashrc \
+    && echo 'export LANG=en_US.UTF-8' > ~yocto/.bashrc \
+    && echo 'export LANGUAGE=en+US.UTF-8' > ~yocto/.bashrc
 
 COPY install-buildtools.sh / 
 RUN bash /install-buildtools.sh \
