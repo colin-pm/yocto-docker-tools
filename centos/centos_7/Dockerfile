@@ -25,6 +25,8 @@ RUN yum install -y epel-release \
         gcc \
         gcc-c++ \
         glibc-devel \
+        glibc-langpack-en \
+        glibc-common \
         texinfo \
         chrpath \
         socat \
@@ -45,7 +47,7 @@ RUN yum install -y epel-release \
     && printf "yocto ALL= NOPASSWD: ALL\\n" >> /etc/sudoers \
     && echo 'export LC_ALL=en_US.UTF-8' >> ~yocto/.bashrc \
     && echo 'export LANG=en_US.UTF-8' >> ~yocto/.bashrc \
-    && echo 'export LANGUAGE=en+US.UTF-8' >> ~yocto/.bashrc
+    && echo 'export LANGUAGE=en_US.UTF-8' >> ~yocto/.bashrc
 
 COPY install-buildtools.sh / 
 RUN bash /install-buildtools.sh \
