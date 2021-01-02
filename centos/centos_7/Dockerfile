@@ -43,14 +43,14 @@ RUN yum install -y epel-release \
     && useradd -ms /bin/bash yocto \
     && printf "yocto:yocto" | chpasswd \
     && printf "yocto ALL= NOPASSWD: ALL\\n" >> /etc/sudoers \
-    && echo 'export LC_ALL=en_US.UTF-8' > ~yocto/.bashrc \
-    && echo 'export LANG=en_US.UTF-8' > ~yocto/.bashrc \
-    && echo 'export LANGUAGE=en+US.UTF-8' > ~yocto/.bashrc
+    && echo 'export LC_ALL=en_US.UTF-8' >> ~yocto/.bashrc \
+    && echo 'export LANG=en_US.UTF-8' >> ~yocto/.bashrc \
+    && echo 'export LANGUAGE=en+US.UTF-8' >> ~yocto/.bashrc
 
 COPY install-buildtools.sh / 
 RUN bash /install-buildtools.sh \
     && rm /install-buildtools.sh \
-    && cat /opt/poky/3.2.1/environment-setup-* > ~yocto/.bashrc
+    && cat /opt/poky/3.2.1/environment-setup-* >> ~yocto/.bashrc
 
 USER yocto
 WORKDIR /home/yocto

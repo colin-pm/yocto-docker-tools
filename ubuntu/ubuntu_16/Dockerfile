@@ -45,14 +45,14 @@ RUN apt-get -qq update \
     && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 \
     && echo 'dash dash/sh boolean false' | debconf-set-selections \
     && dpkg-reconfigure dash \
-    && echo 'export LC_ALL=en_US.UTF-8' > ~yocto/.bashrc \
-    && echo 'export LANG=en_US.UTF-8' > ~yocto/.bashrc \
-    && echo 'export LANGUAGE=en+US.UTF-8' > ~yocto/.bashrc
+    && echo 'export LC_ALL=en_US.UTF-8' >> ~yocto/.bashrc \
+    && echo 'export LANG=en_US.UTF-8' >> ~yocto/.bashrc \
+    && echo 'export LANGUAGE=en+US.UTF-8' >> ~yocto/.bashrc
 
 COPY install-buildtools.sh / 
 RUN bash /install-buildtools.sh \
     && rm /install-buildtools.sh \
-    && cat /opt/poky/3.2.1/environment-setup-* > ~yocto/.bashrc
+    && cat /opt/poky/3.2.1/environment-setup-* >> ~yocto/.bashrc
 
 
 USER yocto

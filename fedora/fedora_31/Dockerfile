@@ -49,7 +49,7 @@ RUN dnf -y update \
     && useradd -ms /bin/bash yocto \
     && printf "yocto:yocto" | chpasswd \
     && printf "yocto ALL= NOPASSWD: ALL\\n" >> /etc/sudoers \
-    && echo 'export LANG=en_US.UTF-8' > ~yocto/.bashrc
+    && echo 'export LANG=en_US.UTF-8' >> ~yocto/.bashrc
 
 USER yocto
 WORKDIR /home/yocto
