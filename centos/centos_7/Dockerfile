@@ -48,7 +48,8 @@ RUN yum install -y epel-release \
 COPY install-buildtools.sh / 
 RUN bash /install-buildtools.sh \
     && rm /install-buildtools.sh \
-    && cat /opt/poky/3.2.1/environment-setup-* > ~yocto/.bashrc
+    && cat /opt/poky/3.2.1/environment-setup-* > ~yocto/.bashrc \
+    && source ~yocto/.bashrc
 
 USER yocto
 WORKDIR /home/yocto

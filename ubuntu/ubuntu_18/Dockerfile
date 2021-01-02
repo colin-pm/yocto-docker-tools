@@ -44,6 +44,7 @@ RUN apt-get -qq update \
     && locale-gen en_US.UTF-8 \
     && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 \
     && echo 'export LANG=en_US.UTF-8' > ~yocto/.bashrc \
+    && source ~yocto/.bashrc \
     && echo 'dash dash/sh boolean false' | debconf-set-selections \
     && dpkg-reconfigure dash
 
