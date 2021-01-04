@@ -40,14 +40,13 @@ RUN apt-get -qq update \
     && adduser yocto sudo \
     && printf "yocto ALL= NOPASSWD: ALL\\n" >> /etc/sudoers \
     && /usr/sbin/locale-gen en_US.UTF-8 \
-    && dpkg-reconfigure locales \
     && locale-gen en_US.UTF-8 \
     && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 \
     && echo 'dash dash/sh boolean false' | debconf-set-selections \
     && dpkg-reconfigure dash \
-    && echo 'export LC_ALL=en_US.UTF-8' >> ~yocto/.bashrc \
     && echo 'export LANG=en_US.UTF-8' >> ~yocto/.bashrc \
-    && echo 'export LANGUAGE=en+US.UTF-8' >> ~yocto/.bashrc
+    && chown yocto:yocto ~yocto/.bashrc \
+    && chmod 755 ~yocto/.bashrc
 
 USER yocto
 WORKDIR /home/yocto

@@ -1,8 +1,8 @@
 sut:
     build: .
     environment:
-        - BASH_ENV=~/.bashrc
-    command: /bin/bash -c "
+        - BASH_ENV=~yocto/.bashrc
+    command: /bin/bash -i -c "
         git clone git://git.yoctoproject.org/poky
         && source poky/oe-init-build-env
         && bitbake --dry-run core-image-minimal" 
