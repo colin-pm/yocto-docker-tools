@@ -41,6 +41,7 @@ RUN yum install -y epel-release \
         mesa-libGL-devel \
         openssh-server \
         openssh-clients \
+        sudo \
     && pip3 install GitPython jinja2 \
     && useradd -ms /bin/bash yocto \
     && printf "yocto:yocto" | chpasswd \
