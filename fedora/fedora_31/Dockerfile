@@ -46,6 +46,7 @@ RUN dnf -y update \
         mesa-libGL-devel \
         openssh-server \
         openssh-clients \
+        sudo \
     && useradd -ms /bin/bash yocto \
     && printf "yocto:yocto" | chpasswd \
     && printf "yocto ALL= NOPASSWD: ALL\\n" >> /etc/sudoers \

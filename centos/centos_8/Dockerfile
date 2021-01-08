@@ -49,6 +49,7 @@ RUN dnf install -y 'dnf-command(config-manager)' \
         glibc-langpack-en \
         openssh-server \
         openssh-clients \
+        sudo \
     && useradd -ms /bin/bash yocto \
     && printf "yocto:yocto" | chpasswd \
     && printf "yocto ALL= NOPASSWD: ALL\\n" >> /etc/sudoers \

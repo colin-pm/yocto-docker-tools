@@ -35,6 +35,7 @@ RUN apt-get -qq update \
        python3-subunit \
        mesa-common-dev \
        openssh-server \
+       sudo \
     && useradd -ms /bin/bash yocto \
     && printf "yocto:yocto" | chpasswd \
     && adduser yocto sudo \
