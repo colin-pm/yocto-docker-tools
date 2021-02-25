@@ -1,6 +1,0 @@
-sut:
-    build: .
-    command: /bin/bash -i -c "
-        git clone git://git.yoctoproject.org/poky
-        && source poky/oe-init-build-env
-        && bitbake --dry-run core-image-minimal" 

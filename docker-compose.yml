@@ -14,13 +14,6 @@ services:
         image: "${DOCKER_USERNAME}/yocto-centos8:${DOCKER_BUILD_TAG}"
         container_name: yocto-centos8
         tty: true
-    yocto-debian9:
-        build:
-            context: debian/debian_9
-            dockerfile: Dockerfile
-        image: "${DOCKER_USERNAME}/yocto-debian9:${DOCKER_BUILD_TAG}"
-        container_name: yocto-debian9
-        tty: true
     yocto-debian10:
         build:
             context: debian/debian_10
