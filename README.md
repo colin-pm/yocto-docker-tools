@@ -21,7 +21,6 @@ The images listed below are intended for **generating open-source library packag
 * CentOS 8
 
 ### Debian
-* Debian 9.x (Stretch)
 * Debian 10.x (Buster)
 
 ## Instructions
