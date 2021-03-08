@@ -29,7 +29,7 @@ The images listed below are intended for **generating open-source library packag
 
 ### Debian
 * [Debian 10.x (Buster)](https://hub.docker.com/repository/docker/colinmca/yocto-debian10)
-* ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/colinmca/yocto-debian10)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/colinmca/yocto-debian10)
 
 ## Instructions
 
