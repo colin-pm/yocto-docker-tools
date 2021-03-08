@@ -9,19 +9,27 @@ The images listed below are intended for **generating open-source library packag
 
 ### Ubuntu
 * [Ubuntu 16.04 (LTS)](https://hub.docker.com/repository/docker/colinmca/yocto-ubuntu16)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/colinmca/yocto-ubuntu16)
 * [Ubuntu 18.04 (LTS)](https://hub.docker.com/repository/docker/colinmca/yocto-ubuntu18)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/colinmca/yocto-ubuntu18)
 * [Ubuntu 20.04 (LTS)](https://hub.docker.com/repository/docker/colinmca/yocto-ubuntu20)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/colinmca/yocto-ubuntu20)
 
 ### Fedora
 * [Fedora 31](https://hub.docker.com/repository/docker/colinmca/yocto-fedora31)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/colinmca/yocto-fedora31)
 * [Fedora 32](https://hub.docker.com/repository/docker/colinmca/yocto-fedora32)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/colinmca/yocto-fedora32)
 
 ### CentOS
 * [CentOS 7](https://hub.docker.com/repository/docker/colinmca/yocto-centos7)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/colinmca/yocto-centos7)
 * [CentOS 8](https://hub.docker.com/repository/docker/colinmca/yocto-centos8)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/colinmca/yocto-centos8)
 
 ### Debian
 * [Debian 10.x (Buster)](https://hub.docker.com/repository/docker/colinmca/yocto-debian10)
+* ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/colinmca/yocto-debian10)
 
 ## Instructions
 
